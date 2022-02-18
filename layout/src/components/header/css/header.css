@@ -1,8 +1,14 @@
 .header {
   padding: 20px 0;
-  background: #ccc;
+  background: #ffffff;
 }
 
 .menu {
   display: flex;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
 }

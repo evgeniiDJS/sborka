@@ -1,0 +1,227 @@
+.main {
+	display: flex;
+}
+
+.interactive {
+	flex-basis: 70%;
+	padding-top: 56px;
+}
+
+.interactive__content {
+	padding: 10px 105px 0 36px;
+}
+
+.cast {
+	flex-grow: 1;
+	padding-top: 40px;
+}
+// interactive
+.progress {
+	display: flex;
+	justify-content: space-between;
+}
+
+.progress-content {
+	position: relative;
+	text-align: center;
+}
+
+.progress__round {
+	display: inline-block;
+	background: #3366ff;
+	color: #ffffff;
+	text-align: center;
+	border-radius: 50%;
+	width: 18px;
+	height: 18px;
+}
+
+.progress__round--line::after {
+	position: absolute;
+	width: 200px;
+	top: 11px;
+	content: '';
+	border-top: 1px solid #3366ff;
+}
+
+.three {
+	border: 1px solid #3366ff;
+	background-color: #ffffff;
+	color: #000;
+}
+
+.three::after {
+	position: absolute;
+	width: 176px;
+	top: 11px;
+	left: 30px;
+	content: '';
+	border-top: 1px solid #3366ff;
+	opacity: 0.2;
+}
+
+.four {
+	opacity: 0.2;
+}
+
+.progress__text {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+	color: #000000;
+	padding-top: 10px;
+}
+
+.interactive-billing-info {
+	padding: 55px 15px 0 0;
+}
+
+.billing-info-title {
+	padding: 0 0 35px 50px;
+}
+
+.billing-info-input {
+	display: flex;
+	padding: 0 0 20px 42px;
+}
+
+.interactive-card {
+	margin: 0 10px 0 20px;
+	display: block;
+	width: 550px;
+	height: 298px;
+	border: 1px solid #b4b4b4;
+	border-radius: 5px;
+	box-shadow: 5px -5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.interactive-card-block {
+	padding: 21px 0 0 30px;
+}
+
+.interactive-card-form {
+	background-color: #ededf1;
+	border: 0;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+	transition: 0.3s box-shadow;
+	outline: none;
+}
+
+.interactive-card-form:hover {
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.interactive-card-text {
+	display: block;
+	width: 94%;
+	margin: 10px 0;
+	padding: 10px;
+}
+
+.interactive-card-block-input {
+	display: flex;
+}
+
+.interactive-card-number {
+	display: block;
+	width: 100px;
+	margin: 15px 29px 0 0;
+	padding: 10px;
+}
+
+.interactive-card-block-expire {
+	display: flex;
+	margin: 25px 0 0 0;
+}
+
+.interactive-card-expire {
+	display: block;
+	width: 100px;
+	margin: 10px 0;
+	padding: 10px;
+}
+
+.interactive-card-block-expire-col1 {
+	padding: 0 25px 0 0;
+}
+
+.interactive-card-radio {
+	margin: 40px 0 0 40px;
+}
+
+.interactive-card-buttons {
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 120px 0 50px;
+}
+//cast
+
+.mybasket {
+	padding: 4px 0 0 0;
+}
+
+.mybasket_items {
+	position: relative;
+	display: flex;
+	padding: 25px 0 0 0;
+}
+
+.mybasket_items_description--col1 {
+	padding: 0 0 0 15px;
+}
+
+.mybasket_items_description--col2 {
+	padding: 20px 0 0 10px;
+}
+
+.mybasket_items_description_block-col1 {
+	padding: 10px 0 0 0;
+}
+
+.mybasket_items_description_block-col2 {
+	padding: 26px 0 0 5px;
+}
+
+.mybasket_items_description_btn {
+	display: inline-block;
+	background: none;
+	color: #000;
+	text-align: center;
+	border-radius: 50%;
+	width: 23px;
+	height: 20px;
+	font-weight: bold;
+	border: 2px solid #000;
+}
+
+.mybasket_items_description_input {
+	border: none;
+	text-align: center;
+	outline: none;
+}
+
+.promo {
+	padding: 95px 0 0 0;
+}
+
+.promo-input {
+	display: flex;
+	padding: 30px 0 0 0;
+}
+
+.input-two {
+	width: 65%;
+	margin: 0 15px 0 0;
+}
+
+.summation {
+	padding: 90px 0 0 0;
+}
+
+.summation--flex {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 25px 13px 2px;
+}

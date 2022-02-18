@@ -11,12 +11,12 @@
 				{{ icon({
 					iconName: 'search',
 					className: 'icons',
-					attributes: 'style="width: 24px; height: 24px; fill: #212121;"'
+					attributes: 'style="width: 44px; height: 24px; padding-right: 20px; fill: #212121;"'
 				}) }}
 				{{ icon({
 					iconName: 'sum',
 					className: 'icons',
-					attributes: 'style="width: 24px; height: 21px; fill: #212121;"'
+					attributes: 'style="width: 34px; height: 31px; fill: #212121;"'
 				}) }}
 			</div>
 		</div>

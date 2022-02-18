@@ -38,6 +38,67 @@ html._mobile body {
   -webkit-text-size-adjust: 100%;
 }
 
+.main {
+  display: flex;
+}
+
+.interactive {
+  flex-basis: 70%;
+  padding-top: 60px;
+}
+
+.cast {
+  flex-grow: 1;
+  padding-top: 40px;
+}
+
+.progress {
+  display: flex;
+  justify-content: space-around;
+}
+
+.progress-content {
+  position: relative;
+  text-align: center;
+}
+
+.progress__round {
+  display: inline-block;
+  background: #3366FF;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 50%;
+  padding: .3em .65em;
+}
+
+.progress__round--line::after {
+  position: absolute;
+  width: 285px;
+  top: 15px;
+  content: "";
+  border-top: 1px solid #3366FF;
+}
+
+.three {
+  border: 1px solid #3366FF;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.four {
+  opacity: 0.2;
+}
+
+.progress__text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  padding-top: 10px;
+}
+
 img,
 fieldset {
   border: 0;
@@ -203,11 +264,17 @@ button {
 
 .header {
   padding: 20px 0;
-  background: #ccc;
+  background: #ffffff;
 }
 
 .menu {
   display: flex;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
 }
 
 .button {
@@ -221,6 +288,11 @@ button {
   font-size: 16px;
   letter-spacing: -0.5px;
   padding: 1px 20px 0;
+  /* &__chevron-right {
+		margin-left: 5px;
+		transition: transform 0.1s ease-out,
+			fill $default-transition-duration $default-transition-function;
+	} */
 }
 
 .button:hover {
@@ -237,9 +309,4 @@ button {
 .button:active .button__chevron-right {
   transform: translateX(1px);
   transition: none;
-}
-
-.button__chevron-right {
-  margin-left: 5px;
-  transition: transform 0.1s ease-out, fill 0.4s ease-out;
 }

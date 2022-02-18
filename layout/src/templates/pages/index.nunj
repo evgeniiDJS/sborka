@@ -13,61 +13,147 @@
 	{% include '../../components/header/header.nunj' %}
 
 	<div class="container">
-
-		<div style="padding:20px 0;">
-			{{ button({
-				className: '',
-				children: 'Buy something',
-				chevronRight: true
-			}) }}
-		</div>
-
-		<div style="padding:20px 0;">
-
-			<h2 style="margin-bottom: 15px;">Пример использования циклов и функции range():</h2>
-
-			<div class="row">
-				{% for i in range(1, 13)  %}
-					<span>{{ i }}</span>
-				{% endfor %}
-			</div>
-
-		</div>
-
-		<div style="padding:20px 0;">
-
-			<h2 style="margin-bottom: 15px;">Пример с переменными:</h2>
-
-			{% for item in someData %}
-				<div style="margin-bottom: 15px;">
-					<h3>{{ item.title }}</h3>
-					<p>{{ item.text }}</p>
+		<main class="main">
+			<article class="interactive">
+				<div class="interactive__content">
+					<div class="progress">
+						<div class="progress-content">
+							<div class="progress__round progress__round--line">1</div>
+							<p class="progress__text">Account</p>
+						</div>
+						<div class="progress-content progress__round--line">
+							<div class="progress__round">2</div>
+							<p class="progress__text">Shipping</p>
+						</div>
+						<div class="progress-content">
+							<div class="progress__round three">3</div>
+							<p class="progress__text">Billing</p>
+						</div>
+						<div class="progress-content">
+							<div class="progress__round four">4</div>
+							<p class="progress__text four">Review</p>
+						</div>
+					</div>
 				</div>
-			{% endfor %}
-
-		</div>
-
-		{# Пример с функциями #}
-		<p style="margin-bottom: 20px;">{{ addAwesome('Это текст для теста функций') }}</p>
-
-		{% if DEVELOP %}
-			<div class="debug" style="margin-bottom: 20px;">
-				<h2 style="margin-bottom: 15px;">Debug:</h2>
-				<p>Эта информация будет выводиться только при DEVELOP = true.</p>
-			</div>
-		{% endif %}
-
-		<div style="padding:20px 0;">
-
-			<h2 style="margin-bottom: 15px;">Пример использования SVG-спрайта</h2>
-
-			{{ icon({
-				iconName: 'chat',
-				className: 'icon',
-				attributes: 'viewBox="0 0 20 20" style="width: 40px; height: 40px; fill: #212121;"'
-			}) }}
-
-		</div>
-
+				<div class="interactive-billing-info">
+					<h3 class="billing-info-title">Billing Information</h3>
+					<div class="billing-info-input">
+						<div class="radio">
+							<input id="radio-1" name="radio" type="radio" checked>
+							<label for="radio-1" class="radio-label">Pay with Credit Card</label>
+						</div>
+						<div class="radio">
+							<input id="radio-2" name="radio" type="radio">
+							<label  for="radio-2" class="radio-label">{{ icon({
+														iconName: 'paypal',
+														className: 'icons',
+														attributes: 'style="width: 85px; height: 23px; fill: #212121;"'
+													}) }}</label>
+						</div>
+					</div>
+				</div>
+				<div class="interactive-card">
+					<form class="interactive-card-block">
+						<p>Name on card</p>
+						<input class="interactive-card-form interactive-card-text" type="text" placeholder="Placeholder Text">
+						<p>Card number</p>
+						<div class="interactive-card-block-input">
+							<input class="interactive-card-form interactive-card-number" type="text" inputmode="numeric" minlength="4" maxlength="4" size="4">
+							<input class="interactive-card-form interactive-card-number" type="text" inputmode="numeric" minlength="4" maxlength="4" size="4">
+							<input class="interactive-card-form interactive-card-number" type="text" inputmode="numeric" minlength="4" maxlength="4" size="4">
+							<input class="interactive-card-form interactive-card-number" type="text" inputmode="numeric" minlength="4" maxlength="4" size="4">
+						</div>
+						<div class="interactive-card-block-expire">
+							<div class="interactive-card-block-expire-col1">
+								<label>Expire date</label>
+								<input class="interactive-card-form interactive-card-expire" type="text">
+							</div>
+							<div class="interactive-card-block-expire-col2">
+								<label>CVV code</label>
+								<input class="interactive-card-form interactive-card-expire" type="password" inputmode="numeric" minlength="3" maxlength="3" size="3">
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="interactive-card-radio">
+					<div class="radio-square">
+						<input id="radio-3" name="radio" type="checkbox" checked>
+						<label for="radio-3" class="radio-label-square"><span style="opacity: 0.7;">Save information of this credit card</span></label>
+					</div>
+					<div class="radio-square">
+						<input id="radio-4" name="radio" type="checkbox">
+						<label for="radio-4" class="radio-label-square"> <span style="opacity: 0.7;">I accept the</span> terms and comditions and the <span style="opacity: 0.7;">Privacy Policies</span></label>
+					</div>
+				</div>
+				<div class="interactive-card-buttons">
+					<button class="interactive-card-btn-back">Back</button>
+					<button class="btn-default interactive-card-btn-out">Check Out</button>
+				</div>
+			</article>
+			<aside class="cast">
+				<div class="mybasket">
+					<h3>My basket</h3>
+					<div class="mybasket_items">
+						{{ icon({
+							iconName: 'jacket',
+							className: 'icons',
+							attributes: 'style="width: 99.91px; height: 100px; fill: #212121;"'
+						}) }}
+						<div class="mybasket_items_description mybasket_items_description--col1 ">
+							<p class="mybasket_items_description_title">Amet minim mollit non <br/>deserunt ullamco est sit</p>
+							<div class="mybasket_items_description_block-col1">
+								<button class="mybasket_items_description_btn" onclick="this.nextElementSibling.stepDown()">&minus;</button>
+								<input class="mybasket_items_description_input" type="number" min="0" max="20" value="1" readonly="">
+								<button class="mybasket_items_description_btn" onclick="this.previousElementSibling.stepUp()">&plus;</button>
+								<span>&nbsp;&nbsp;&nbsp;$525</span>
+							</div>
+						</div>
+						<a href="#" class="close"></a>
+					</div>
+					<div class="mybasket_items">
+						{{ icon({
+							iconName: 'amet',
+							className: 'icons',
+							attributes: 'style="width: 99.91px; height: 100px; fill: #212121;"'
+						}) }}
+						<div class="mybasket_items_description mybasket_items_description--col2">
+							<p class="mybasket_items_description_title">Amet minim mollit non</p>
+							<div class="mybasket_items_description_block-col2">
+								<button class="mybasket_items_description_btn" onclick="this.nextElementSibling.stepDown()">−</button>
+								<input class="mybasket_items_description_input" type="number" min="0" max="20" value="1" readonly="">
+								<button class="mybasket_items_description_btn" onclick="this.previousElementSibling.stepUp()">+</button>
+								<span>&nbsp;&nbsp;&nbsp;$525</span>
+							</div>
+						</div>
+						<a href="#" class="close"></a>
+					</div>
+				</div>
+				<div class="promo">
+					<h3>Promo code</h3>
+					<div class="promo-input">
+						<input class="interactive-card-form interactive-card-text input-two" type="text" placeholder="Placeholder Text">
+						<button class="btn-default promo-input-btn-apply">Apply</button>
+					</div>
+				</div>
+				<div class="summation">
+					<div class="summation-subtotal summation--flex">
+						<p>Subtotal</p>
+						<p>$1 050</p>
+					</div>
+					<div class="summation-tax summation--flex">
+						<p>Tax</p>
+						<p>$100</p>
+					</div>
+					<div class="summation-shipping summation--flex">
+						<p>Shipping</p>
+						<p>$150</p>
+					</div>
+					<div class="summation-total summation--flex">
+						<h3>Total</h3>
+						<h3>$1 030</h3>
+					</div>
+				</div>
+			</aside>
+		</main>
 	</div>
 {% endblock content %}

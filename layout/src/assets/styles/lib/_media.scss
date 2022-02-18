@@ -217,3 +217,17 @@
 		@content;
 	}
 }
+
+// ADAPTIVE TABLET
+
+.cast {
+	@media screen and (max-width: $tablet) {
+		display: none;
+	}
+}
+
+.menu {
+	@media screen and (max-width: $tablet) {
+		display: none;
+	}
+}
