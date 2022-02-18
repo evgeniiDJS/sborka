@@ -1,1 +1,1 @@
-https://evgeniiDJS.github.io/sborka/layout/src/templates/pages/
+https://evgeniiDJS.github.io/sborka/layout/
