@@ -1,0 +1,5 @@
+{% macro iconjacket(props) %}
+	<svg{% if props.className %} class="{{ props.className }}"{% endif %}{% if props.attributes %} {{ props.attributes }}{% endif %}>
+		<use xlink:href="#iconjacket-{{ props.iconName }}" />
+	</svg>
+{% endmacro %}

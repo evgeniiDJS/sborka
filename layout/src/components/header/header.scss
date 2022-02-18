@@ -1,0 +1,25 @@
+.header {
+	padding: 15px 0;
+	background: #ffffff;
+	border: 1px solid #cfcfcf;
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+}
+
+.menu__item {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+	color: #000000;
+	text-decoration: none;
+}
+
+#menu__toggle,
+.menu__box {
+	display: none;
+}

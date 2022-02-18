@@ -1,0 +1,14 @@
+.wrapper {
+	position: relative;
+}
+
+.container {
+	max-width: 1140px;
+	width: calc(100% - 40px);
+	margin: 0 auto;
+}
+
+.header-content {
+	display: flex;
+	justify-content: space-between;
+}

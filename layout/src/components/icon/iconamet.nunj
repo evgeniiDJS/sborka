@@ -1,0 +1,5 @@
+{% macro iconamet(props) %}
+	<svg{% if props.className %} class="{{ props.className }}"{% endif %}{% if props.attributes %} {{ props.attributes }}{% endif %}>
+		<use xlink:href="#iconamet-{{ props.iconName }}" />
+	</svg>
+{% endmacro %}

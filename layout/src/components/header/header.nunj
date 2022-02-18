@@ -1,0 +1,24 @@
+<div class="header">
+	<div class="container">
+		<div class="header-content">
+			{{ icon({
+				iconName: 'logos',
+				className: 'icons',
+				attributes: 'style="width: 89px; height: 32px; fill: #212121;"'
+			}) }}
+			{{ menu() }}
+			<div>
+				{{ icon({
+					iconName: 'search',
+					className: 'icons',
+					attributes: 'style="width: 44px; height: 24px; padding-right: 20px; fill: #212121;"'
+				}) }}
+				{{ icon({
+					iconName: 'sum',
+					className: 'icons',
+					attributes: 'style="width: 34px; height: 31px; fill: #212121;"'
+				}) }}
+			</div>
+		</div>
+	</div>
+</div>

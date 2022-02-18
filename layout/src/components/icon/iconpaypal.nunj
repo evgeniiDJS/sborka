@@ -1,0 +1,5 @@
+{% macro iconpaypal(props) %}
+	<svg{% if props.className %} class="{{ props.className }}"{% endif %}{% if props.attributes %} {{ props.attributes }}{% endif %}>
+		<use xlink:href="#iconpaypal-{{ props.iconName }}" />
+	</svg>
+{% endmacro %}
